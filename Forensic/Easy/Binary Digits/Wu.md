@@ -1,6 +1,9 @@
 
 ## 1. Binary Digits
 
+Đề cho ta một file .bin toàn những kí tự nhị phân 0,1
+<img width="2796" height="806" alt="image" src="https://github.com/user-attachments/assets/5a94b3fe-7993-40e9-b1d2-e30add9e3b54" />
+
 Bản chất của dữ liệu số:
 
 * Nếu ta đọc 8 bit 1 lúc, ta có văn bản (ASCII)
