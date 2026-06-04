@@ -1,6 +1,6 @@
 Bài này mình giải bằng 2 cách:
 
-## Sử dụng Autopsy:
+## Sử dụng Autopsy
 
 Vào timeline:
 
