@@ -8,6 +8,8 @@ Kết quả:
 
 ### Cách 2: Sử dụng bộ công cụ mã nguồn mở Sleuth Kit
 
+Đề bài nói rằng "This time I deleted the file!" nghĩa là file chứa flag đã bị xóa.
+
 Liệt kê các tên tệp tin và thư mục đã bị xóa :
 
 Command:
@@ -16,7 +18,7 @@ fls -r -d disko-4.dd
 ```
 <img width="898" height="56" alt="image" src="https://github.com/user-attachments/assets/92018d8f-4b7a-4774-ada0-53c0d3dfbd0d" />
 
-Ta thấy có 2 file, vì mình biết là file dont-delete.gz rồi nên mình trích xuất ra khỏi ổ đĩa theo inode và sao chép ra một tập tin mới bằng `icat`.
+Ta thấy có 2 file, vì biết là file dont-delete.gz rồi nên mình trích xuất ra khỏi ổ đĩa theo inode và sao chép ra một tập tin mới bằng `icat`luôn.
 
 Command:
 ```
