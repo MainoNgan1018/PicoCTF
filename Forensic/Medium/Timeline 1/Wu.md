@@ -57,7 +57,7 @@ b (birth): thời điểm tệp tin được tạo ra lần đầu
     
   * Dãy các kí tự tiếp theo là quyền đọc -r, ghi -w, thực thi -x của ba nhóm chủ sở hữu, nhóm và người khác
     
-- Cột User IB và Group ID:
+- Cột User ID và Group ID:
   
   * Số 0 đầu là UID: mã số định danh người sở hữu tệp tin, số 0 thường đại diện cho tài khoản root (quản trị cao nhất)
     
@@ -87,7 +87,7 @@ Command:
 ```
  icat <image_name> ID
 ```
-Sau khi xem nội dung ta base64 ra flag.
+Ta xem nội dung của file bất thường .ash_history với inode 32716 . Và nó chứa flag ở định dạng base64.
 
 <img width="1145" height="160" alt="image4" src="https://github.com/user-attachments/assets/0a90b827-12f8-4aa6-9a91-efac4086dd63" />
 
