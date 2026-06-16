@@ -1,9 +1,20 @@
-### **1.Để làm bài này trước tiên ta phải cài đặt các công cụ cần thiết:**
+## **1.Để làm bài này trước tiên ta phải cài đặt các công cụ cần thiết:**
 ```
 sudo apt-get update
 sudo apt-get install sleuthkit
 ```
-### **2.Tạo tệp nội dung và dòng thời gian:**
+### Tác dụng chính của The Sleuth Kit (TSK):
+
+**Phân tích ổ cứng và thiết bị:** Cho phép các nhà điều tra phân tích cấu trúc đĩa, hệ thống tệp và khôi phục bằng chứng từ các tệp ảnh đĩa (image file).
+
+**Khôi phục dữ liệu đã xóa:** Giúp tìm kiếm và phục hồi các tệp tin hoặc thư mục đã bị xóa hoặc ẩn khỏi hệ điều hành thông thường.
+
+**Tạo dòng thời gian:** Theo dõi và trích xuất lịch sử hoạt động, thời gian tạo/sửa/xóa các tệp tin.
+
+**Hỗ trợ đa nền tảng:** Phân tích được hầu hết các hệ thống tệp phổ biến như NTFS, FAT, exFAT, Ext2/3/4, HFS+...
+
+
+## **2.Tạo tệp nội dung và dòng thời gian:**
 
 Sử dụng tool fls để quét cấu trúc và thu thập siêu dữ liệu tệp vào một tệp nội dung, nó xuất ra dữ liệu thô dưới định dạng Body File.
 
@@ -30,7 +41,7 @@ mactime -b body.txt > new_body.txt
 Xem nội dung bằng lệnh `cat new_body.txt`:
 <img width="1150" height="220" alt="image10" src="https://github.com/user-attachments/assets/e3889890-0c1d-46fa-a5d4-810a5f272a98" />
 
-### **3.Lọc các sự kiện theo hint (MACB)**
+## **3.Lọc các sự kiện theo hint (MACB)**
 
 Command:
 ```
@@ -81,7 +92,7 @@ Khi xây dựng timeline = mactime tất cả các sự kiện thay đổi trên
 → attacker đã xóa file lịch sử cũ và tạo một file mới để xóa sạch dấu vết (anti - forensics).
 
 
-### **4.Trích xuất nội dung từ một file nghi vấn**
+## **4.Trích xuất nội dung từ một file nghi vấn**
 
 Command:
 ```
