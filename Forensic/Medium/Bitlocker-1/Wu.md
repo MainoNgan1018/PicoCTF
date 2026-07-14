@@ -1,3 +1,9 @@
+Đầu tiên ta cần biết:
+
+BitLocker là tính năng mã hóa toàn bộ ổ đĩa được tích hợp sẵn trên các hệ điều hành Windows (phản ứng với phiên bản Pro, Enterprise và Education). Nó hoạt động như một "két sắt" kỹ thuật số, bảo vệ mọi dữ liệu trên máy tính khỏi việc bị đánh cắp hoặc truy cập trái phép ngay cả khi ổ cứng bị tháo rời.
+
+Đến với bài này, xem qua dữ liệu thô trên FTK:
+
 <img width="3480" height="1750" alt="Screenshot 2026-07-14 093105" src="https://github.com/user-attachments/assets/b7b41941-aec5-47bf-b45b-b30c62d9b0cb" />
 
 <img width="2255" height="397" alt="image" src="https://github.com/user-attachments/assets/3dc4ea45-847e-465a-98d8-ed92056f33c5" />
