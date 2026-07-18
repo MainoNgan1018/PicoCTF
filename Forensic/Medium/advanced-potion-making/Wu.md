@@ -1,6 +1,21 @@
+Sửa header magic bytes:
+```
+89 50 4E 47 0D 0A 1A 0A
+
+```
+
+Chỉnh sửa độ dài của chunk IHDR:
+```
+00 00 00 0D
+```
+
 <img width="1625" height="960" alt="image" src="https://github.com/user-attachments/assets/109a98af-6b32-4a0e-b92c-a6e38842b5b1" />
 
+Mở ảnh:
+
 <img width="2922" height="1677" alt="image" src="https://github.com/user-attachments/assets/4d911842-da1d-4baa-a643-f7abf7d1de69" />
+
+Đổi màu:
 
 <img width="3015" height="1882" alt="image" src="https://github.com/user-attachments/assets/1eaeeb16-d963-4a2c-9ab0-ac32b889c079" />
 
