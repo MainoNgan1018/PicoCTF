@@ -40,3 +40,7 @@ Follow TLS Stream lại để xem nội dung.
 <img width="2862" height="1785" alt="image" src="https://github.com/user-attachments/assets/a6ba934e-1929-4abc-8e55-5cc20d3336a9" />
 
 Flag: picoCTF{nongshim.shrimp.crackers}
+
+WebNet1 làm tương tự.
+
+Flag: picoCTF{honey.roasted.peanuts} 
