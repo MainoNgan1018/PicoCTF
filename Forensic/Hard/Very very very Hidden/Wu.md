@@ -37,7 +37,7 @@ Trước khi cài ta phải tắt tạm thời Windows Defender / Antivirus
 
 Vào `Windows Security` > `Virus & threat protection settings` > `Manage settings` và tạm thời tắt Real-time protection.
 
-Sau đó tạo file code trên máy, ở đây mik mở tạo trên VsCode, chọn 1 thư mục để lưu trữ.
+Sau đó tạo file code trên máy, ở đây tôi mở trên VsCode, chọn 1 thư mục để lưu trữ.
 
 Tạo file Extract-Invoke-PSImage.ps1 trong thư mục đó, mở trang github trên cop toàn bộ nội dung vào rồi lưu.
 
@@ -52,7 +52,9 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
 ```
 Extract-Invoke-PSImage -Image .\evil_duck.png -Out .\result.ps1
 ```
+
 Mở file `result.ps1`:
+
 <img width="795" height="455" alt="image" src="https://github.com/user-attachments/assets/2e53179e-869e-4121-a5af-7c1d00684ac5" />
 
 Đoạn mã PowerShell trong hình ảnh nội dung là thực hiện phép toán XOR giữa hai chuỗi $string1 và $string2 để giải mã ra dòng cờ (flag).
@@ -63,4 +65,4 @@ Ta copy và chỉnh lại đoạn code, xóa dòng cuối và thêm dòng lệnh
 
 <img width="3317" height="1705" alt="image" src="https://github.com/user-attachments/assets/53a1ecbc-d87d-4450-a741-4c627a6a4133" />
 
-
+Flag: picoCTF{n1c3_job_f1nd1ng_th3_s3cr3t_in_the_im@g3}
