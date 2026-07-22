@@ -2,6 +2,8 @@
 
 BitLocker là tính năng mã hóa toàn bộ ổ đĩa được tích hợp sẵn trên các hệ điều hành Windows (phản ứng với phiên bản Pro, Enterprise và Education). Nó hoạt động như một "két sắt" kỹ thuật số, bảo vệ mọi dữ liệu trên máy tính khỏi việc bị đánh cắp hoặc truy cập trái phép ngay cả khi ổ cứng bị tháo rời.
 
+# Phân tích
+
 Đến với bài này, xem qua dữ liệu thô trên FTK:
 
 <img width="3480" height="1750" alt="Screenshot 2026-07-14 093105" src="https://github.com/user-attachments/assets/b7b41941-aec5-47bf-b45b-b30c62d9b0cb" />
@@ -16,7 +18,7 @@ Công cụ quan trọng nhất `dislocker`. Đây là công cụ chuẩn trên L
 
 Vì đề bài nhấn mạnh vào "simple password" nên ta sẽ sử dụng `Hashcat` hoặc `John the Ripper` .
 
-# Bước 1: ta sẽ trích xuất hash của BitLocker
+## Bước 1: ta sẽ trích xuất hash của BitLocker
 
 **Tải script từ GitHub của John the Ripper**
 ```
@@ -42,11 +44,15 @@ Vì có nhiều dòng hash khác và còn bị lặp nên khi dùng hashcat nó 
 
 Nên ta chỉ để lại 1 dòng duy nhất để Hashcar không bị phân tâm và lỗi trong quá trình phân tích.
 
+* **$bitlocker$0$ (Fast Attack Mode)**: đây là định dạng tối ưu cho tốc độ thử (brute-force/dictionary nhanh nhất). Nó bỏ qua một số bước kiểm tra xác thực toàn vẹn (MAC verification) phức tạp trong quá trình vét cạn -> tốc độ chạy GPU (hashcat) đạt tối đa.
+* **$bitlocker$1$ (MAC Verification Mode)**: Định dạng này thực hiện thêm cơ chế kiểm tra MAC (Message Authentication Code) cho mỗi lần thử mật khẩu -> chạy chậm hơn chút nhưng tuyệt đối chính xác.
+* **$bitlocker$2$** và **$bitlocker$3$**: Đây là các định dạng tương ứng cho các phương thức hoặc cấu trúc khóa phụ/phiên bản khác (thường liên quan đến các cơ chế bảo vệ bằng cú pháp khác hoặc REK/SVK tùy thuộc vào công cụ trích xuất)
+
 Ta cần mở file bitlocker_hash.txt bằng lệnh `nano bitlocker_hash.txt`.
 
-Xóa hết các dòng chỉ để lại đúng 1 dòng (dài nhất và có cấu trúc $bitlocker$0$16$). Đây là chân dung duy nhất và chính xác nhất của ổ đĩa và thường là dòng đại diện cho Password.
+Xóa hết các dòng chỉ để lại đúng 1 dòng (ở đây tôi chọn $bitlocker$0$ cho nhanh). Đây là chân dung duy nhất và chính xác nhất của ổ đĩa và thường là dòng đại diện cho Password.
 
-# Bước 2: Bẻ khóa (Crack) mật khẩu
+## Bước 2: Bẻ khóa (Crack) mật khẩu
 
 Ta dùng Rockyou.txt. Đây là một file văn bản chứa danh sách hàng chục triệu mật khẩu thực tế từng bị lộ trong các vụ hack.
 
@@ -73,7 +79,7 @@ Chạy lệnh và bấm s định kì để kiểm tra xem nó đã tìm thấy 
 
 Dòng chữ Recovered: 1/1 và mật khẩu hiển thị ngay phía sau dấu hai chấm chính là mật khẩu : jacqueline.
  
-# Bước 3: Giải mã bằng dislocker
+## Bước 3: Giải mã bằng dislocker
 **Tạo thư mục mount trong thư mục home của bạn (để tránh lỗi quyền trên /mnt/)**
 ```
 mkdir -p ~/bitlocker_mount
