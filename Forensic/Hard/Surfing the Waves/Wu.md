@@ -31,8 +31,12 @@ Khi cắt bỏ 2 chữ số cuối cùng của mỗi con số trong mảng (coi 
 
 Gom tất cả các giá trị sau khi cắt bỏ này và lọc ra, kết quả sẽ trả về đúng 16 giá trị duy nhất.
 
-Vì chỉ có đúng 16 mức giá trị biên độ khác nhau lặp đi lặp lại trong toàn bộ file âm thanh 1 giây đó, người ra đề đã dùng 16 mức biên độ này để đại diện cho 16 ký tự Hex.
+Vì chỉ có đúng 16 mức giá trị biên độ khác nhau lặp đi lặp lại trong toàn bộ file âm thanh 1 giây đó, người ra đề đã dùng 16 mức biên độ này để đại diện cho 16 ký tự Hex, và 16 kí tự này dùng để làm bảng chữ cái mã hóa.
 
-Giải mã bằng script `wave.py`
+Và số lượng mẫu âm thanh >> số lượng kí tự Hex của flag.
+
+Chuỗi sẽ loại bỏ các số bị lặp liên tiếp, ví dụ nếu có 10 số đầu dạng 20xx thì chỉ đại diện 1 kí tự Hex là 20.
+
+Giải mã bằng script `wave.py`.
 
 Flag: picoCTF{mU21C_1s_1337_5db6b85e}
