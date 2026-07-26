@@ -373,14 +373,5 @@ là:
 2593949075 = 0x9ab4b6d3
 ```
 
-Theo format của flag:
+Flag: picoCTF{9ab4b6d3}
 
-```text
-picoCTF{9ab4b6d3}
-```
-
-### Flag
-
-```text
-picoCTF{9ab4b6d3}
-```
