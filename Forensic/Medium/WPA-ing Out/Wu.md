@@ -7,14 +7,17 @@ Trước khi bắt tay, cả Client và AP đều biết trước tên mạng (S
 ### Quy trình 4-Way Handshake (WPA2)
 
 Quy trình này giúp Client và Access Point (AP) xác thực lẫn nhau mà không cần gửi mật khẩu trực tiếp qua không trung.
-```
+
+
+
 | Bước | Người gửi | Thông điệp / Nội dung | Mục đích |
 | :--- | :--- | :--- | :--- |
 | **1** | AP | Gửi **ANonce** (giá trị ngẫu nhiên từ AP) | AP thách thức Client chứng minh danh tính. |
 | **2** | Client | Gửi **SNonce** (giá trị ngẫu nhiên từ Client) + **MIC** | Client tính toán MIC dựa trên mật khẩu và gửi lại để chứng minh mình biết mật khẩu. |
 | **3** | AP | Gửi xác nhận + **GTK** (Group Temporal Key) | AP xác nhận Client đúng, gửi khóa mã hóa dữ liệu. |
 | **4** | Client | Gửi xác nhận cuối cùng | Hoàn tất bắt tay, bắt đầu truyền dữ liệu an toàn. |
-```
+
+
 
 > **Lưu ý:** `aircrack-ng` hoạt động bằng cách bắt các gói tin này, sau đó thử các mật khẩu từ wordlist (dictionary attack) để tạo ra một giá trị MIC giả lập. Nếu MIC giả lập khớp với MIC thực tế trong gói tin bắt được, đó chính là mật khẩu đúng.
 
