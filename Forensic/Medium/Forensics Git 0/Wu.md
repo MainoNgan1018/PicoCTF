@@ -8,8 +8,11 @@ mmls disk.img
 
 <img width="2087" height="505" alt="image" src="https://github.com/user-attachments/assets/0a19654f-e90a-4cab-ad1e-f4e35c9e9e46" />
 Có 2 phân vùng:
+
 * Phân vùng 1: bắt đầu tại sector 2048
+  
 * Phân vùng 2: bắt đầu tại sector 1140736
+  
 Linux Swap / Solaris x86 (0x82) là phân vùng Swap (bộ nhớ ảo). Nó không phải là một hệ thống tập tin có thư mục, file hay inode như ext4. Ní là một vùng nhớ đệm mà hệ điều hành dùng để tràn dữ liệu RAM sang đĩa khi hết bộ nhớ.
 
 Vì thế các lệnh như fls hay icat sẽ không thể hoạt động trên phân vùng này.
